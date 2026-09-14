@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: uv
+    directory: /back
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: "chore(back)"
+    groups:
+      python-minor:
+        update-types: [minor, patch]
+
+  - package-ecosystem: npm
+    directory: /front
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: "chore(front)"
+    groups:
+      npm-minor:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: "ci"
