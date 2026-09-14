@@ -107,6 +107,10 @@ cd back && uv run --extra api uvicorn linotipo.api.app:app
 - `.github/workflows/back.yml` (cambios en `back/`, `schema/`, `prompts/`): ruff, mypy, pytest y comprobación de que `schema/edition.schema.json` está al día.
 - `.github/workflows/front.yml` (cambios en `front/`, `editions/`, `schema/`): `check:editions`, `astro check` y `astro build`.
 
+## Licencia
+
+Código bajo licencia MIT (ver `LICENSE`).
+
 ## Licencias de tipografías
 
 Playfair Display y Source Serif 4, autoalojadas en `front/public/fonts/`, bajo SIL Open Font License 1.1 (ver `OFL-*.txt` en ese directorio).
