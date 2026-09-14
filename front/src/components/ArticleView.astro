@@ -1,0 +1,55 @@
+---
+import type { Article, Source } from "../schemas/edition";
+import { hostname } from "../lib/editions";
+
+interface Props {
+  article: Article;
+  sources: Map<string, Source>;
+  date: string;
+}
+
+const { article, sources, date } = Astro.props;
+const cited = article.citations
+  .map((c) => ({ citation: c, source: sources.get(c.source_id) }))
+  .filter((c): c is { citation: (typeof article.citations)[number]; source: Source } =>
+    Boolean(c.source)
+  );
+---
+
+<article class:list={["article", { lead: article.lead }]} id={article.slug}>
+  <header class="article-head">
+    <h3 class="headline">{article.headline}</h3>
+    {article.subhead && <p class="subhead">{article.subhead}</p>}
+  </header>
+  <div class="article-body">
+    {
+      article.body.map((paragraph, index) => (
+        <p>
+          {index === 0 && article.dateline && <span class="dateline">{article.dateline}. </span>}
+          {paragraph}
+        </p>
+      ))
+    }
+  </div>
+  {
+    cited.length > 0 && (
+      <footer class="article-sources">
+        <span class="article-sources-label">Fuentes</span>
+        <ol>
+          {cited.map(({ citation, source }) => (
+            <li>
+              <a href={source.url} rel="noopener external" target="_blank">
+                {source.outlet}
+              </a>
+              <span class="source-host"> ({hostname(source.url)})</span>
+              {citation.quote && <q class="source-quote">{citation.quote}</q>}
+            </li>
+          ))}
+        </ol>
+        <a class="article-sources-all" href={`/fuentes/${date}#${article.slug}`}>
+          Todas las fuentes de la edición
+        </a>
+      </footer>
+    )
+  }
+</article>

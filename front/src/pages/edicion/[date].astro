@@ -1,0 +1,18 @@
+---
+import Base from "../../layouts/Base.astro";
+import Masthead from "../../components/Masthead.astro";
+import EditionView from "../../components/EditionView.astro";
+import { getEditions, formatShortDate } from "../../lib/editions";
+
+export async function getStaticPaths() {
+  const editions = await getEditions();
+  return editions.map((entry) => ({ params: { date: entry.id }, props: { edition: entry.data } }));
+}
+
+const { edition } = Astro.props;
+---
+
+<Base title={`LINOTIPO · Edición n.º ${edition.number} · ${formatShortDate(edition.date)}`}>
+  <Masthead date={edition.date} number={edition.number} />
+  <EditionView edition={edition} />
+</Base>

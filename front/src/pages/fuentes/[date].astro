@@ -1,0 +1,81 @@
+---
+import Base from "../../layouts/Base.astro";
+import Masthead from "../../components/Masthead.astro";
+import { getEditions, formatShortDate, formatDateTime, hostname } from "../../lib/editions";
+
+export async function getStaticPaths() {
+  const editions = await getEditions();
+  return editions.map((entry) => ({ params: { date: entry.id }, props: { edition: entry.data } }));
+}
+
+const { edition } = Astro.props;
+
+// Qué artículos citan cada fuente, para poder navegar en ambos sentidos.
+type Ref = { slug: string; headline: string; section: string };
+const citedBy = new Map<string, Ref[]>();
+for (const section of edition.sections) {
+  for (const article of section.articles) {
+    for (const citation of article.citations) {
+      const list = citedBy.get(citation.source_id) ?? [];
+      list.push({ slug: article.slug, headline: article.headline, section: section.name });
+      citedBy.set(citation.source_id, list);
+    }
+  }
+}
+
+const byOutlet = new Map<string, typeof edition.sources>();
+for (const source of edition.sources) {
+  byOutlet.set(source.outlet, [...(byOutlet.get(source.outlet) ?? []), source]);
+}
+const outlets = [...byOutlet.keys()].sort((a, b) => a.localeCompare(b, "es"));
+---
+
+<Base
+  title={`LINOTIPO · Fuentes · ${formatShortDate(edition.date)}`}
+  description={`Fuentes consultadas para la edición n.º ${edition.number} de Linotipo.`}
+>
+  <Masthead date={edition.date} number={edition.number} compact />
+  <main class="sources-page">
+    <h2 class="page-title">Fuentes de la edición n.º {edition.number}</h2>
+    <p class="page-intro">
+      {edition.sources.length} piezas de {outlets.length} medios. Generada el{" "}
+      {formatDateTime(edition.generated_at)} con el pipeline {edition.pipeline_version} y los
+      prompts <code>{edition.prompt_version}</code>.
+    </p>
+    {
+      outlets.map((outlet) => (
+        <section class="outlet">
+          <h3 class="outlet-name">{outlet}</h3>
+          <ul class="source-list">
+            {(byOutlet.get(outlet) ?? []).map((source) => {
+              const refs = citedBy.get(source.id) ?? [];
+              return (
+                <li id={source.id}>
+                  <a href={source.url} rel="noopener external" target="_blank">
+                    {source.title}
+                  </a>
+                  <span class="source-meta">
+                    {" "}
+                    · {hostname(source.url)} · {formatDateTime(source.published_at)}
+                  </span>
+                  {refs.length > 0 && (
+                    <span class="source-cited">
+                      {" "}
+                      → citada en{" "}
+                      {refs.map((a, i) => (
+                        <>
+                          {i > 0 && ", "}
+                          <a href={`/edicion/${edition.date}#${a.slug}`}>{a.headline}</a>
+                        </>
+                      ))}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))
+    }
+  </main>
+</Base>

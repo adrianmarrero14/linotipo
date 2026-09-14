@@ -1,0 +1,42 @@
+name: back
+
+on:
+  push:
+    branches: [main]
+    paths: ["back/**", "schema/**", "prompts/**", ".github/workflows/back.yml"]
+  pull_request:
+    paths: ["back/**", "schema/**", "prompts/**", ".github/workflows/back.yml"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: back
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: back/uv.lock
+
+      - name: Instalar dependencias
+        run: uv sync --frozen --all-extras
+
+      - name: ruff (lint)
+        run: uv run ruff check src tests
+
+      - name: ruff (format)
+        run: uv run ruff format --check src tests
+
+      - name: mypy (dominio, estricto)
+        run: uv run mypy
+
+      - name: pytest
+        run: uv run pytest
+
+      - name: El schema exportado coincide con el modelo
+        run: |
+          uv run linotipo schema export
+          git diff --exit-code -- ../schema/edition.schema.json

@@ -1,0 +1,439 @@
+{
+  "date": "2026-09-14",
+  "number": 1,
+  "locale": "es-ES",
+  "region": "ES",
+  "sections": [
+    {
+      "key": "portada",
+      "name": "Portada",
+      "articles": [
+        {
+          "slug": "el-gobierno-aprueba-la-reforma-de-la-ley-de-vivienda",
+          "headline": "El Gobierno aprueba la reforma de la ley de vivienda",
+          "subhead": "Cobertura de 3 fuentes",
+          "dateline": "MADRID",
+          "body": [
+            "El Gobierno aprueba la reforma de la ley de vivienda. Así lo recogen este lunes El País, RTVE y elDiario.es, según las piezas consultadas por Linotipo.",
+            "El País titula «El Gobierno aprueba la reforma de la ley de vivienda». Otros medios coinciden en lo esencial: RTVE habla de «El Consejo de Ministros aprueba la reforma de la ley de vivienda»; elDiario.es habla de «Claves de la reforma de la ley de vivienda aprobada por el Gobierno».",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "db5cef690827",
+              "quote": "El Gobierno aprueba la reforma de la ley de vivienda"
+            },
+            {
+              "source_id": "baf757820e80",
+              "quote": null
+            },
+            {
+              "source_id": "2b1638d44502",
+              "quote": null
+            }
+          ],
+          "topics": [
+            "el",
+            "gobierno"
+          ],
+          "lead": true
+        }
+      ]
+    },
+    {
+      "key": "espana",
+      "name": "España",
+      "articles": [
+        {
+          "slug": "el-banco-de-espana-mejora-la-prevision-de-crecimiento-al-2-4",
+          "headline": "El Banco de España mejora la previsión de crecimiento al 2,4%",
+          "subhead": "Cobertura de 2 fuentes",
+          "dateline": "MADRID",
+          "body": [
+            "El Banco de España mejora la previsión de crecimiento al 2,4%. Así lo recogen este lunes El Mundo y Expansión, según las piezas consultadas por Linotipo.",
+            "El Mundo titula «El Banco de España mejora la previsión de crecimiento al 2,4%». Otros medios coinciden en lo esencial: Expansión habla de «El Banco de España eleva su previsión de crecimiento para este año».",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "42e460afe8ac",
+              "quote": "El Banco de España mejora la previsión de crecimiento al 2,4%"
+            },
+            {
+              "source_id": "6f37bd3a98c5",
+              "quote": null
+            }
+          ],
+          "topics": [
+            "el",
+            "banco"
+          ],
+          "lead": true
+        },
+        {
+          "slug": "la-huelga-de-transporte-afecta-a-los-principales-puertos",
+          "headline": "La huelga de transporte afecta a los principales puertos",
+          "subhead": "Cobertura de 1 fuente",
+          "dateline": "MADRID",
+          "body": [
+            "La huelga de transporte afecta a los principales puertos. Así lo recogen este lunes El Mundo, según las piezas consultadas por Linotipo.",
+            "El Mundo titula «La huelga de transporte afecta a los principales puertos». Por ahora es el único medio que recoge la noticia.",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "511afbc536d2",
+              "quote": "La huelga de transporte afecta a los principales puertos"
+            }
+          ],
+          "topics": [
+            "la",
+            "huelga"
+          ],
+          "lead": false
+        }
+      ]
+    },
+    {
+      "key": "internacional",
+      "name": "Internacional",
+      "articles": [
+        {
+          "slug": "el-csic-descubre-una-nueva-especie-de-anfibio-en-los-pirineos",
+          "headline": "El CSIC descubre una nueva especie de anfibio en los Pirineos",
+          "subhead": "Cobertura de 2 fuentes",
+          "dateline": "MADRID",
+          "body": [
+            "El CSIC descubre una nueva especie de anfibio en los Pirineos. Así lo recogen este lunes 20minutos y El País, según las piezas consultadas por Linotipo.",
+            "El País titula «El CSIC descubre una nueva especie de anfibio en los Pirineos». Otros medios coinciden en lo esencial: 20minutos habla de «Investigadores del CSIC hallan una nueva especie de anfibio».",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "d26c524b5b8d",
+              "quote": "El CSIC descubre una nueva especie de anfibio en los Pirineos"
+            },
+            {
+              "source_id": "95026ab398c3",
+              "quote": null
+            }
+          ],
+          "topics": [
+            "el",
+            "csic"
+          ],
+          "lead": true
+        },
+        {
+          "slug": "sanidad-amplia-el-calendario-de-vacunacion-infantil",
+          "headline": "Sanidad amplía el calendario de vacunación infantil",
+          "subhead": "Cobertura de 1 fuente",
+          "dateline": "MADRID",
+          "body": [
+            "Sanidad amplía el calendario de vacunación infantil. Así lo recogen este lunes elDiario.es, según las piezas consultadas por Linotipo.",
+            "elDiario.es titula «Sanidad amplía el calendario de vacunación infantil». Por ahora es el único medio que recoge la noticia.",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "2ebac4291027",
+              "quote": "Sanidad amplía el calendario de vacunación infantil"
+            }
+          ],
+          "topics": [
+            "sanidad",
+            "amplía"
+          ],
+          "lead": false
+        }
+      ]
+    },
+    {
+      "key": "economia",
+      "name": "Economía",
+      "articles": [
+        {
+          "slug": "el-prado-inaugura-una-gran-retrospectiva-de-sorolla",
+          "headline": "El Prado inaugura una gran retrospectiva de Sorolla",
+          "subhead": "Cobertura de 2 fuentes",
+          "dateline": "MADRID",
+          "body": [
+            "El Prado inaugura una gran retrospectiva de Sorolla. Así lo recogen este lunes RTVE y elDiario.es, según las piezas consultadas por Linotipo.",
+            "elDiario.es titula «El Prado inaugura una gran retrospectiva de Sorolla». Otros medios coinciden en lo esencial: RTVE habla de «El Museo del Prado abre la retrospectiva de Sorolla».",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "6fc1f8b06cf6",
+              "quote": "El Prado inaugura una gran retrospectiva de Sorolla"
+            },
+            {
+              "source_id": "119b674d8f23",
+              "quote": null
+            }
+          ],
+          "topics": [
+            "el",
+            "prado"
+          ],
+          "lead": true
+        }
+      ]
+    },
+    {
+      "key": "sociedad",
+      "name": "Sociedad",
+      "articles": [
+        {
+          "slug": "el-real-madrid-gana-en-el-ultimo-minuto-y-lidera-la-clasificacion",
+          "headline": "El Real Madrid gana en el último minuto y lidera la clasificación",
+          "subhead": "Cobertura de 2 fuentes",
+          "dateline": "MADRID",
+          "body": [
+            "El Real Madrid gana en el último minuto y lidera la clasificación. Así lo recogen este lunes El Mundo y Marca, según las piezas consultadas por Linotipo.",
+            "El Mundo titula «El Real Madrid gana en el último minuto y lidera la clasificación». Otros medios coinciden en lo esencial: Marca habla de «El Real Madrid gana en el descuento y se pone líder».",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "6c6f6679de29",
+              "quote": "El Real Madrid gana en el último minuto y lidera la clasificación"
+            },
+            {
+              "source_id": "cf708afef4b7",
+              "quote": null
+            }
+          ],
+          "topics": [
+            "el",
+            "real"
+          ],
+          "lead": true
+        }
+      ]
+    },
+    {
+      "key": "cultura",
+      "name": "Cultura",
+      "articles": [
+        {
+          "slug": "la-comision-europea-propone-un-nuevo-paquete-de-sanciones",
+          "headline": "La Comisión Europea propone un nuevo paquete de sanciones",
+          "subhead": "Cobertura de 2 fuentes",
+          "dateline": "MADRID",
+          "body": [
+            "La Comisión Europea propone un nuevo paquete de sanciones. Así lo recogen este lunes El País y RTVE, según las piezas consultadas por Linotipo.",
+            "El País titula «La Comisión Europea propone un nuevo paquete de sanciones». Otros medios coinciden en lo esencial: RTVE habla de «Bruselas plantea un nuevo paquete de sanciones».",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "08f6da738a09",
+              "quote": "La Comisión Europea propone un nuevo paquete de sanciones"
+            },
+            {
+              "source_id": "6024b74defc5",
+              "quote": null
+            }
+          ],
+          "topics": [
+            "la",
+            "comisión"
+          ],
+          "lead": true
+        }
+      ]
+    },
+    {
+      "key": "deportes",
+      "name": "Deportes",
+      "articles": [
+        {
+          "slug": "la-ola-de-calor-deja-temperaturas-record-en-el-valle-del-guadalquivir",
+          "headline": "La ola de calor deja temperaturas récord en el valle del Guadalquivir",
+          "subhead": "Cobertura de 2 fuentes",
+          "dateline": "MADRID",
+          "body": [
+            "La ola de calor deja temperaturas récord en el valle del Guadalquivir. Así lo recogen este lunes 20minutos y El País, según las piezas consultadas por Linotipo.",
+            "20minutos titula «La ola de calor deja temperaturas récord en el valle del Guadalquivir». Otros medios coinciden en lo esencial: El País habla de «Récord de temperaturas por la ola de calor en Andalucía».",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "0d385ce6acac",
+              "quote": "La ola de calor deja temperaturas récord en el valle del Guadalquivir"
+            },
+            {
+              "source_id": "3b4735104f95",
+              "quote": null
+            }
+          ],
+          "topics": [
+            "la",
+            "ola"
+          ],
+          "lead": true
+        }
+      ]
+    },
+    {
+      "key": "ciencia",
+      "name": "Ciencia",
+      "articles": [
+        {
+          "slug": "el-ibex-35-cierra-en-maximos-anuales-impulsado-por-la-banca",
+          "headline": "El Ibex 35 cierra en máximos anuales impulsado por la banca",
+          "subhead": "Cobertura de 1 fuente",
+          "dateline": "MADRID",
+          "body": [
+            "El Ibex 35 cierra en máximos anuales impulsado por la banca. Así lo recogen este lunes Expansión, según las piezas consultadas por Linotipo.",
+            "Expansión titula «El Ibex 35 cierra en máximos anuales impulsado por la banca». Por ahora es el único medio que recoge la noticia.",
+            "Este artículo ha sido generado con un modelo de prueba sin acceso al texto completo de las fuentes; el contenido se limita a lo que indican sus titulares. Consulte las fuentes citadas al pie para el detalle."
+          ],
+          "citations": [
+            {
+              "source_id": "10a1c95ba6ac",
+              "quote": "El Ibex 35 cierra en máximos anuales impulsado por la banca"
+            }
+          ],
+          "topics": [
+            "el",
+            "ibex"
+          ],
+          "lead": true
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "db5cef690827",
+      "outlet": "El País",
+      "title": "El Gobierno aprueba la reforma de la ley de vivienda",
+      "url": "https://example.org/el-pa%C3%ADs/politica/reforma-vivienda",
+      "published_at": "2026-09-14T06:00:00Z"
+    },
+    {
+      "id": "baf757820e80",
+      "outlet": "RTVE",
+      "title": "El Consejo de Ministros aprueba la reforma de la ley de vivienda",
+      "url": "https://example.org/rtve/noticias/reforma-vivienda-consejo",
+      "published_at": "2026-09-14T05:43:00Z"
+    },
+    {
+      "id": "2b1638d44502",
+      "outlet": "elDiario.es",
+      "title": "Claves de la reforma de la ley de vivienda aprobada por el Gobierno",
+      "url": "https://example.org/eldiarioes/politica/claves-vivienda",
+      "published_at": "2026-09-14T05:26:00Z"
+    },
+    {
+      "id": "42e460afe8ac",
+      "outlet": "El Mundo",
+      "title": "El Banco de España mejora la previsión de crecimiento al 2,4%",
+      "url": "https://example.org/el-mundo/economia/banco-espana-prevision",
+      "published_at": "2026-09-14T05:09:00Z"
+    },
+    {
+      "id": "6f37bd3a98c5",
+      "outlet": "Expansión",
+      "title": "El Banco de España eleva su previsión de crecimiento para este año",
+      "url": "https://example.org/expansi%C3%B3n/economia/prevision-crecimiento",
+      "published_at": "2026-09-14T04:52:00Z"
+    },
+    {
+      "id": "08f6da738a09",
+      "outlet": "El País",
+      "title": "La Comisión Europea propone un nuevo paquete de sanciones",
+      "url": "https://example.org/el-pa%C3%ADs/internacional/comision-sanciones",
+      "published_at": "2026-09-14T04:35:00Z"
+    },
+    {
+      "id": "6024b74defc5",
+      "outlet": "RTVE",
+      "title": "Bruselas plantea un nuevo paquete de sanciones",
+      "url": "https://example.org/rtve/noticias/bruselas-sanciones",
+      "published_at": "2026-09-14T04:18:00Z"
+    },
+    {
+      "id": "0d385ce6acac",
+      "outlet": "20minutos",
+      "title": "La ola de calor deja temperaturas récord en el valle del Guadalquivir",
+      "url": "https://example.org/20minutos/sociedad/ola-calor-guadalquivir",
+      "published_at": "2026-09-14T04:01:00Z"
+    },
+    {
+      "id": "3b4735104f95",
+      "outlet": "El País",
+      "title": "Récord de temperaturas por la ola de calor en Andalucía",
+      "url": "https://example.org/el-pa%C3%ADs/clima/record-ola-calor",
+      "published_at": "2026-09-14T03:44:00Z"
+    },
+    {
+      "id": "6c6f6679de29",
+      "outlet": "El Mundo",
+      "title": "El Real Madrid gana en el último minuto y lidera la clasificación",
+      "url": "https://example.org/el-mundo/deportes/real-madrid-lider",
+      "published_at": "2026-09-14T03:27:00Z"
+    },
+    {
+      "id": "cf708afef4b7",
+      "outlet": "Marca",
+      "title": "El Real Madrid gana en el descuento y se pone líder",
+      "url": "https://example.org/marca/futbol/madrid-lider",
+      "published_at": "2026-09-14T03:10:00Z"
+    },
+    {
+      "id": "6fc1f8b06cf6",
+      "outlet": "elDiario.es",
+      "title": "El Prado inaugura una gran retrospectiva de Sorolla",
+      "url": "https://example.org/eldiarioes/cultura/prado-sorolla",
+      "published_at": "2026-09-14T02:53:00Z"
+    },
+    {
+      "id": "119b674d8f23",
+      "outlet": "RTVE",
+      "title": "El Museo del Prado abre la retrospectiva de Sorolla",
+      "url": "https://example.org/rtve/noticias/prado-retrospectiva-sorolla",
+      "published_at": "2026-09-14T02:36:00Z"
+    },
+    {
+      "id": "d26c524b5b8d",
+      "outlet": "El País",
+      "title": "El CSIC descubre una nueva especie de anfibio en los Pirineos",
+      "url": "https://example.org/el-pa%C3%ADs/ciencia/csic-anfibio-pirineos",
+      "published_at": "2026-09-14T02:19:00Z"
+    },
+    {
+      "id": "95026ab398c3",
+      "outlet": "20minutos",
+      "title": "Investigadores del CSIC hallan una nueva especie de anfibio",
+      "url": "https://example.org/20minutos/ciencia/csic-nueva-especie",
+      "published_at": "2026-09-14T02:02:00Z"
+    },
+    {
+      "id": "10a1c95ba6ac",
+      "outlet": "Expansión",
+      "title": "El Ibex 35 cierra en máximos anuales impulsado por la banca",
+      "url": "https://example.org/expansi%C3%B3n/mercados/ibex-maximos",
+      "published_at": "2026-09-14T01:45:00Z"
+    },
+    {
+      "id": "511afbc536d2",
+      "outlet": "El Mundo",
+      "title": "La huelga de transporte afecta a los principales puertos",
+      "url": "https://example.org/el-mundo/espana/huelga-transporte-puertos",
+      "published_at": "2026-09-14T01:28:00Z"
+    },
+    {
+      "id": "2ebac4291027",
+      "outlet": "elDiario.es",
+      "title": "Sanidad amplía el calendario de vacunación infantil",
+      "url": "https://example.org/eldiarioes/sociedad/calendario-vacunacion",
+      "published_at": "2026-09-14T01:11:00Z"
+    }
+  ],
+  "generated_at": "2026-09-14T19:29:30.197665Z",
+  "pipeline_version": "0.1.0",
+  "prompt_version": "select=v1;write=v1"
+}

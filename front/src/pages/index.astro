@@ -1,0 +1,17 @@
+---
+import Base from "../layouts/Base.astro";
+import Masthead from "../components/Masthead.astro";
+import EditionView from "../components/EditionView.astro";
+import { getLatestEdition, formatShortDate } from "../lib/editions";
+
+const latest = await getLatestEdition();
+if (!latest) {
+  throw new Error("No hay ediciones en editions/. Ejecuta `linotipo run-all` en back/.");
+}
+const edition = latest.data;
+---
+
+<Base title={`LINOTIPO · ${formatShortDate(edition.date)}`}>
+  <Masthead date={edition.date} number={edition.number} />
+  <EditionView edition={edition} />
+</Base>

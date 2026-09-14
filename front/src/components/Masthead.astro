@@ -1,0 +1,30 @@
+---
+import { formatLongDate } from "../lib/editions";
+
+interface Props {
+  date?: string;
+  number?: number;
+  /** Página secundaria (archivo, fuentes): cabecera más compacta. */
+  compact?: boolean;
+}
+
+const { date, number, compact = false } = Astro.props;
+---
+
+<header class:list={["masthead", { compact }]}>
+  <hr class="rule rule-thin" />
+  <p class="masthead-ears">
+    <span>{date ? formatLongDate(date) : "Diario generado por IA"}</span>
+    <span class="masthead-ear-right">{number ? `Edición n.º ${number}` : "linotipo.news"}</span>
+  </p>
+  <h1 class="masthead-title"><a href="/">LINOTIPO</a></h1>
+  <p class="masthead-motto">Un periódico al día, escrito por una máquina, con las fuentes a la vista</p>
+  <hr class="rule rule-double" />
+  <nav class="masthead-nav" aria-label="Secciones del sitio">
+    <a href="/">Portada</a>
+    {date && <a href={`/edicion/${date}`}>Esta edición</a>}
+    {date && <a href={`/fuentes/${date}`}>Fuentes</a>}
+    <a href="/archivo">Archivo</a>
+  </nav>
+  <hr class="rule rule-thin" />
+</header>

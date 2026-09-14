@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linotipo.news/schema/edition.schema.json",
+  "$defs": {
+    "Article": {
+      "description": "Un artículo de la edición, en texto plano.",
+      "properties": {
+        "slug": {
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Slug",
+          "type": "string"
+        },
+        "headline": {
+          "minLength": 1,
+          "title": "Headline",
+          "type": "string"
+        },
+        "subhead": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subhead"
+        },
+        "dateline": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dateline"
+        },
+        "body": {
+          "description": "Párrafos en texto plano, sin markdown.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Body",
+          "type": "array"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "topics": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Topics",
+          "type": "array"
+        },
+        "lead": {
+          "default": false,
+          "title": "Lead",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "slug",
+        "headline",
+        "body",
+        "citations"
+      ],
+      "title": "Article",
+      "type": "object"
+    },
+    "Citation": {
+      "description": "Referencia de un artículo a una fuente del catálogo de la edición.",
+      "properties": {
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "quote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quote"
+        }
+      },
+      "required": [
+        "source_id"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "Section": {
+      "description": "Una sección del periódico con sus artículos en orden de aparición.",
+      "properties": {
+        "key": {
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Key",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "articles": {
+          "items": {
+            "$ref": "#/$defs/Article"
+          },
+          "title": "Articles",
+          "type": "array"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "articles"
+      ],
+      "title": "Section",
+      "type": "object"
+    },
+    "Source": {
+      "description": "Una pieza publicada por un medio, tal como llegó al pipeline.",
+      "properties": {
+        "id": {
+          "description": "Hash estable (sha256 corto) de la URL.",
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "outlet": {
+          "minLength": 1,
+          "title": "Outlet",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        },
+        "published_at": {
+          "format": "date-time",
+          "title": "Published At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "outlet",
+        "title",
+        "url",
+        "published_at"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "description": "La edición diaria completa. Es un artefacto inmutable.",
+  "properties": {
+    "date": {
+      "format": "date",
+      "title": "Date",
+      "type": "string"
+    },
+    "number": {
+      "minimum": 1,
+      "title": "Number",
+      "type": "integer"
+    },
+    "locale": {
+      "default": "es-ES",
+      "title": "Locale",
+      "type": "string"
+    },
+    "region": {
+      "default": "ES",
+      "title": "Region",
+      "type": "string"
+    },
+    "sections": {
+      "items": {
+        "$ref": "#/$defs/Section"
+      },
+      "title": "Sections",
+      "type": "array"
+    },
+    "sources": {
+      "description": "Catálogo único de fuentes; los artículos las referencian por id.",
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "pipeline_version": {
+      "minLength": 1,
+      "title": "Pipeline Version",
+      "type": "string"
+    },
+    "prompt_version": {
+      "minLength": 1,
+      "title": "Prompt Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "number",
+    "sections",
+    "sources",
+    "generated_at",
+    "pipeline_version",
+    "prompt_version"
+  ],
+  "title": "Edition",
+  "type": "object"
+}

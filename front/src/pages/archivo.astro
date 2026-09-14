@@ -1,0 +1,34 @@
+---
+import Base from "../layouts/Base.astro";
+import Masthead from "../components/Masthead.astro";
+import { getEditions, formatLongDate, articleCount } from "../lib/editions";
+
+const editions = await getEditions();
+---
+
+<Base title="LINOTIPO · Archivo" description="Todas las ediciones de Linotipo.">
+  <Masthead compact />
+  <main class="archive">
+    <h2 class="page-title">Archivo</h2>
+    <p class="page-intro">
+      Una edición por día. Cada una es un documento cerrado: no se corrige ni se actualiza.
+    </p>
+    {editions.length === 0 && <p>Todavía no hay ediciones.</p>}
+    <ol class="archive-list">
+      {
+        editions.map((entry) => (
+          <li>
+            <a class="archive-date" href={`/edicion/${entry.id}`}>
+              {formatLongDate(entry.data.date)}
+            </a>
+            <span class="archive-meta">
+              Edición n.º {entry.data.number} · {entry.data.sections.length} secciones ·{" "}
+              {articleCount(entry.data)} artículos · {entry.data.sources.length} fuentes ·{" "}
+              <a href={`/fuentes/${entry.id}`}>ver fuentes</a>
+            </span>
+          </li>
+        ))
+      }
+    </ol>
+  </main>
+</Base>

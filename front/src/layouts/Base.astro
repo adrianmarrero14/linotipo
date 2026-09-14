@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Linotipo: un periódico diario escrito por un agente de IA." } =
+  Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light" />
+    <title>{title}</title>
+    <link
+      rel="preload"
+      href="/fonts/playfair-display.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/source-serif-4.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+  <body>
+    <div class="page">
+      <slot />
+      <footer class="colophon">
+        <hr class="rule rule-thin" />
+        <p>
+          LINOTIPO es un periódico generado cada día por un agente de inteligencia artificial a
+          partir de fuentes públicas. Una única edición diaria, igual para todos. Cada artículo
+          cita las piezas en que se basa; conviene contrastarlas.
+        </p>
+        <p class="colophon-links">
+          <a href="/">Última edición</a> · <a href="/archivo">Archivo</a> ·
+          <a href="https://linotipo.news">linotipo.news</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

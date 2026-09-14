@@ -1,0 +1,59 @@
+[project]
+name = "linotipo"
+version = "0.1.0"
+description = "Pipeline batch que genera la edición diaria de Linotipo, un periódico escrito por un agente de IA."
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "typer>=0.12",
+  "feedparser>=6.0",
+  "anthropic>=0.40",
+  "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+api = [
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+]
+
+[project.scripts]
+linotipo = "linotipo.cli:app"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+  "mypy>=1.10",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/linotipo"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "W", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["linotipo"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src/linotipo/domain"]
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

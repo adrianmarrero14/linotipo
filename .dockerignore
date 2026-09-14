@@ -1,0 +1,11 @@
+.git
+.github
+front
+back/.venv
+back/.work
+back/.mypy_cache
+back/.ruff_cache
+back/.pytest_cache
+**/__pycache__
+**/node_modules
+.env

@@ -1,0 +1,36 @@
+---
+import type { Edition } from "../schemas/edition";
+import { sourceMap } from "../lib/editions";
+import ArticleView from "./ArticleView.astro";
+
+interface Props {
+  edition: Edition;
+}
+
+const { edition } = Astro.props;
+const sources = sourceMap(edition);
+---
+
+<main class="edition">
+  {
+    edition.sections.map((section) => {
+      const lead = section.articles.find((a) => a.lead);
+      const rest = section.articles.filter((a) => a !== lead);
+      return (
+        <section class="section" id={section.key} aria-labelledby={`section-${section.key}`}>
+          <h2 class="section-title" id={`section-${section.key}`}>
+            <span>{section.name}</span>
+          </h2>
+          {lead && <ArticleView article={lead} sources={sources} date={edition.date} />}
+          {rest.length > 0 && (
+            <div class="section-grid">
+              {rest.map((article) => (
+                <ArticleView article={article} sources={sources} date={edition.date} />
+              ))}
+            </div>
+          )}
+        </section>
+      );
+    })
+  }
+</main>

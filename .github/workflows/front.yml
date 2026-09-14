@@ -1,0 +1,41 @@
+name: front
+
+on:
+  push:
+    branches: [main]
+    paths: ["front/**", "editions/**", "schema/**", ".github/workflows/front.yml"]
+  pull_request:
+    paths: ["front/**", "editions/**", "schema/**", ".github/workflows/front.yml"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: front
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: front/package-lock.json
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: editions/*.json validan contra schema/edition.schema.json
+        run: npm run check:editions
+
+      - name: astro check
+        run: npm run check
+
+      - name: astro build
+        run: npm run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: front/dist
+          retention-days: 7
