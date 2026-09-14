@@ -1,0 +1,29 @@
+---
+import Base from "../layouts/Base.astro";
+import Masthead from "../components/Masthead.astro";
+import { getLatestEdition, formatLongDate } from "../lib/editions";
+
+const latest = await getLatestEdition();
+---
+
+<Base title="LINOTIPO · Página no encontrada" description="Esta página no existe.">
+  <Masthead compact />
+  <main class="not-found">
+    <p class="not-found-code">404</p>
+    <h2 class="page-title">Esta página no está en la edición</h2>
+    <p class="page-intro">
+      Puede que la dirección esté mal escrita o que la edición que buscas no exista. Cada día
+      hay una sola edición, y las anteriores se conservan en el archivo.
+    </p>
+    <ul class="not-found-links">
+      {
+        latest && (
+          <li>
+            <a href="/">Última edición</a>, del {formatLongDate(latest.data.date)}
+          </li>
+        )
+      }
+      <li><a href="/archivo">Archivo de ediciones</a></li>
+    </ul>
+  </main>
+</Base>

@@ -402,3 +402,34 @@ a:hover {
     display: none;
   }
 }
+
+/* 404 */
+.not-found {
+  text-align: center;
+  padding: 2rem 0 4rem;
+}
+.not-found-code {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(4rem, 15vw, 8rem);
+  line-height: 1;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.05em;
+}
+.not-found .page-intro {
+  max-width: 36rem;
+  margin-inline: auto;
+}
+.not-found-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.not-found-links li {
+  margin: 0.4rem 0;
+}
+.not-found-links a {
+  text-decoration: underline;
+  text-decoration-color: var(--rule-soft);
+  text-underline-offset: 0.15em;
+}
