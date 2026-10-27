@@ -1,6 +1,6 @@
 # Linotipo
 
-**[linotipo.news](https://linotipo.news)** es un periódico diario generado por un agente de IA. Una única edición al día, igual para todos los lectores, con diseño de periódico clásico en blanco y negro, organizada por secciones y con las fuentes citadas al pie de cada artículo. Sin personalización, sin feed, sin tiempo real. La primera edición es en español y está centrada en España.
+**Linotipo** (pronto en `linotipo.news`) es un periódico diario generado por un agente de IA. Una única edición al día, igual para todos los lectores, con diseño de periódico clásico en blanco y negro, organizada por secciones y con las fuentes citadas al pie de cada artículo. Sin personalización, sin feed, sin tiempo real. La primera edición es en español y está centrada en España.
 
 ## Arquitectura
 
